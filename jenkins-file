@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+    stages {
+        stage('build') {
+            steps {
+                echo "ertugrul hocamdan selamlar"
+                sh 'echo second step'
+                sh 'echo another step'                
+                sh '''
+                echo 'Multiline'
+                echo 'Example'
+                '''
+                echo 'not using shell'
+            }
+        }
+        stage('test') {
+            steps {
+                echo "ertugrul hocamdan selamlar2"
+                sh 'echo second step'
+                sh 'echo another step'                
+                sh '''
+                echo 'Multiline'
+                echo 'Example'
+                '''
+                echo 'not using shell'
+            }
+        }
+        
+    }
+}
+
